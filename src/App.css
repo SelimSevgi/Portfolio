@@ -100,9 +100,9 @@
 .aboutLeft > img {
   border-radius: 100%;
   width: 500px;
-  height: 500px;
+  height: 550px;
   object-fit: cover;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .aboutRight {
   width: 60%;
