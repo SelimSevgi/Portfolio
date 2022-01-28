@@ -17,11 +17,15 @@ function App() {
     <div className="App">
       <div className="banner">
         <div className="bannerContent">
-          <a href=".comment" className="bannerItem">About</a>
+          <a href=".comment" className="bannerItem">
+            About
+          </a>
           <div className="bannerItemLine"></div>
         </div>
         <div className="bannerContent">
-          <a href=".skill" className="bannerItem">Skill</a>
+          <a href=".skill" className="bannerItem">
+            Skill
+          </a>
           <div className="bannerItemLine"></div>
         </div>
         <div className="bannerContent">
@@ -60,8 +64,8 @@ function App() {
               </strong>{" "}
             </h1>
             <p>
-              I am a newly graduated electrical and electronics engineer.  Also, I improve my frontend
-              development skills.
+              I am a newly graduated electrical and electronics engineer. Also,
+              I improve my frontend development skills.
             </p>
           </div>
         </div>
@@ -135,12 +139,12 @@ function App() {
       <div className="footer">
         <p>
           {" "}
-          <span style={{ color: "#f0535d" }}>© 2022 - ...</span> |{" "}
+          <span style={{ color: "#f0535d" }}>© 2022</span> |{" "}
           <span style={{ color: "rgb(137, 43, 226)" }}>
             Designed & coded with
           </span>{" "}
-          by <strong style={{ color: "#1c2273" }}> Selim Sevgi,</strong> All
-          Rights Reserved.
+          by <strong style={{ color: "rgb(0, 0, 0)" }}> Selim Sevgi,</strong>{" "}
+          All Rights Reserved.
         </p>
       </div>
     </div>
