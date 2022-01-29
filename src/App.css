@@ -52,8 +52,8 @@
   justify-content: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(246, 230, 224, 0.52),
-      rgba(238, 180, 170, 0.979)
+      rgba(0, 0, 0, 0.52),
+      rgba(255, 0, 0, 0.89)
     ),
     url("https://wallpaperaccess.com/full/279547.jpg");
   background-size: cover;
@@ -71,13 +71,13 @@
   margin-top: 50px;
 }
 .commentHeader > span:nth-child(2) {
-  color: #1c2273;
+  color: #000000be;
   font-size: 50px;
   margin: 30px 50px;
   font-weight: 700;
 }
 .commentHeader > span:nth-child(1) {
-  color: #f0535d;
+  color: #ffffff;
   font-size: 20px;
   margin-bottom: 50px;
   font-weight: 700;
@@ -99,15 +99,15 @@
   width: 30%;
 }
 .aboutLeft > img {
-  border-radius: 100%;
-  width: 200px;
-  height: 250px;
+  border-radius: 50px;
+  width: 250px;
+  height: 300px;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .aboutRight {
   width: 60%;
-  color: white;
+  color: rgba(255, 255, 255, 0.733);
   display: flex;
   flex-direction: column;
 }
@@ -116,7 +116,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: rgba(245, 255, 111, 0.685);
+  color: rgba(0, 0, 0, 0.795);
 }
 .aboutRight-icon {
   width: 50px;
@@ -137,13 +137,13 @@
   margin: 20px 0;
   font-size: 25px;
   letter-spacing: 2px;
-  color: rgb(137, 43, 226);
+  color: rgb(9, 10, 58);
 }
 .aboutRight-icon {
   transform: rotate(-40deg);
 }
 .aboutRight-hi:hover > .aboutRight-icon {
-  color: #f0535d;
+  color: #ff0616;
   transition: 0.1s;
   transform: rotate(30deg);
 }
@@ -155,7 +155,7 @@
   justify-content: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(238, 180, 170, 0.979),
+      rgb(234 12 10),
       rgba(118, 138, 216, 0.89)
     ),
     url("https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1536251178/1536251033.jpg");
@@ -175,7 +175,7 @@
   margin-bottom: 30px;
 }
 .skillDesc > span:nth-child(2) {
-  color: #656565;
+  color: rgb(9, 10, 58);
   font-size: 25px;
   margin: 50px 150px;
 }
@@ -188,6 +188,7 @@
   display: flex;
   justify-content: flex-start;
   letter-spacing: 5px;
+  margin-top: 100px;
 }
 .skillGrid {
   width: 70%;
@@ -213,33 +214,170 @@
 }
 
 .skillGrid-item:hover > p {
-  color: #656565;
-  transition: 0.5s;
+  color: #0000009d;
+
+  transition: 0.9s;
 }
 
 .skillGrid-item:hover > .skillGrid-itemIcon {
-  color: #656565;
-  transition: 0.3s;
+  color: #000000be;
+  transition: 0.6s;
 }
-
-.contact {
+.project {
   width: 100%;
-  height: 100vh;
+ 
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(
       to bottom,
-      rgb(118, 138, 216),
-      rgba(254, 242, 216, 0.616)
+      rgb(109 138 209),
+      rgba(0, 0, 0, 0.89)
     ),
-    url("https://i.hizliresim.com/bblv9x8.jfif");
+    url("https://i.hizliresim.com/tr8ruyh.jfif");
   background-size: cover;
   flex-direction: column;
 }
+.projectDesc {
+  margin-top: 80px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 30px;
+}
+.projectDesc > span:nth-child(1),
+.projectDesc > span:nth-child(2) {
+  width: 100%;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  display: flex;
+}
+
+.projectCompanent {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.projectLeft ,
+.projectRight1 {
+  width: 50%;
+  color: rgba(255, 0, 0, 0.89);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.projectLeft > h1 ,
+.projectRight1  > h1 {
+  font-size: 35px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  color: #ffffff98;
+}
+.projectLeft > p,
+.projectRight1 > p {
+
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rgba(255, 0, 0, 0.89);
+}
+.projectIcons,
+.projectIcons1{
+  width: 100%;
+ display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+.projectIcons1{
+justify-content: flex-start;}
+
+.projectIcon {
+    
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  color: #d4f75498;
+  margin-bottom: 10px;
+}
+.projectIcon:hover {
+  color:rgba(217, 255, 0, 0.89);
+  transition: 0.5s;
+}
+.projectRight,
+.projectLeft1 {
+  width: 40%;
+}
+.projectRight > img ,
+.projectLeft1> img{
+  width: 400px;
+}
+.projectFooter {
+  margin-top: 20px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+.projectFooter > a:nth-child(1),
+.projectFooter > a:nth-child(2) {
+  width: 45%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.795);
+  background-color: #ffffff98;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.projectFooter > a:nth-child(1):hover,
+.projectFooter > a:nth-child(2):hover {
+  color: rgba(217, 255, 0, 0.89);
+}
+.contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0),
+    rgba(255, 255, 255, 0.856)
+  );
+}
+.contactImg {
+  width: 1170px;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0),
+      rgba(255, 255, 255, 0.856)
+    ),
+    url("https://i.hizliresim.com/bblv9x8.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
 
 .contactDesc {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
