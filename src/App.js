@@ -1,5 +1,5 @@
 import "./App.css";
-import { MdWavingHand } from "react-icons/md";
+import { MdWavingHand, MdEmail } from "react-icons/md";
 import {
   SiJavascript,
   SiMaterialui,
@@ -12,32 +12,62 @@ import {
 import { DiCss3 } from "react-icons/di";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { FaReact, FaGitAlt } from "react-icons/fa";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
-// import emailjs from "emailjs-com";
+import { styled } from "@mui/material/styles";
+// form
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+// button
+
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 function App() {
-  // const form = useRef();
+  const CssTextField = styled(TextField)({
+    "& label.Mui-focused": {
+      color: "rgba(217, 255, 0, 0.89)",
+      fontWeight: "700",
+    },
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "black",
+        border: "3px solid #ffffff98",
+        backgroundColor: "#ff00001e",
+      },
+      "&:hover fieldset": {
+        borderColor: "rgba(217, 255, 0, 0.89)",
+        border: "3px solid rgba(255, 0, 0, 0.89)",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "rgba(255, 0, 0, 0.89)",
+        border: "3px solid rgba(217, 255, 0, 0.89)",
+      },
+    },
+  });
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_0obrbvn",
-  //       "template_2tavgfq",
-  //       form.current,
-  //       "user_V3lWZKyNg4pF1ip77SF5H"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  //   e.target.reset();
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_0obrbvn",
+        "template_2tavgfq",
+        form.current,
+        "user_V3lWZKyNg4pF1ip77SF5H"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="App">
       <div className="banner">
@@ -61,12 +91,17 @@ function App() {
         </div>
         <div className="bannerContent">
           <a href="#contactMe" className="bannerItem">
-            Contact Me
+            Contact
           </a>
           <div className="bannerItemLine"></div>
         </div>
         <div className="bannerContent">
-          <a href="#resume" className="bannerItem">
+          <a
+            href="https://selim-sevgi-cv.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="bannerItem"
+          >
             Resume
           </a>
           <div className="bannerItemLine"></div>
@@ -166,7 +201,7 @@ function App() {
       <div className="project" id="project">
         {" "}
         <div className="projectDesc">
-          <span>SOME OF THE PPROJECT</span>
+          <span>SOME OF THE PROJECT</span>
           <span>I have designed and worked on</span>
         </div>
         <div className="projectCompanent">
@@ -225,8 +260,18 @@ function App() {
               <SiVercel className="projectIcon" />
             </div>
             <div className="projectFooter">
-              <a href="https://yemeksepeti-clone.vercel.app/">View It Here</a>
-              <a href="https://github.com/SelimSevgi/yemeksepeti-clone">
+              <a
+                href="https://yemeksepeti-clone.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View It Here
+              </a>
+              <a
+                href="https://github.com/SelimSevgi/yemeksepeti-clone"
+                target="_blank"
+                rel="noreferrer"
+              >
                 View Github Repo
               </a>
             </div>
@@ -250,8 +295,18 @@ function App() {
               <SiVercel className="projectIcon" />
             </div>
             <div className="projectFooter">
-              <a href="https://yemeksepeti-clone.vercel.app/">View It Here</a>
-              <a href="https://github.com/SelimSevgi/yemeksepeti-clone">
+              <a
+                href="https://yemeksepeti-clone.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View It Here
+              </a>
+              <a
+                href="https://github.com/SelimSevgi/yemeksepeti-clone"
+                target="_blank"
+                rel="noreferrer"
+              >
                 View Github Repo
               </a>
             </div>
@@ -266,64 +321,81 @@ function App() {
         </div>
       </div>
       <div className="contact" id="contactMe">
+        <p className="contactDesc">CONTACT</p>
         <div className="contactImg">
           {" "}
-          {/* <form className="contactForm" ref={form} onSubmit={sendEmail}>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                required // boş girilmesini önlemek için
-              ></input>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="1231231212*"
-                pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
-                required
-              ></input>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="E-mail*"
-                required
-              ></input>
-              <input
-                type="text"
-                id="interest"
-                name="interest"
-                placeholder="Interested In"
-                required
-              ></input>
-              <textarea
-                id="message"
-                name="message"
-                rows="10"
-                cols="50"
-                placeholder="Message*"
-                required
-              ></textarea>
-              <input
-                type="submit"
-                className="contact-btn"
-                value="Send Message"
-              ></input>
-            </form>*/}
+          <div className="contactContainer">
+            <div className="contactLeft">
+              <span>
+                Contact me immediately by sending an e-mail, you can be sure
+                that I will get back to you as soon as possible.
+              </span>
+              <form ref={form} onSubmit={sendEmail}>
+                <CssTextField
+                  type="text"
+                  name="user_name"
+                  label="Name"
+                  id="custom-css-outlined-input"
+                />
+                <CssTextField
+                  label="Email"
+                  type="email"
+                  name="user_email"
+                  id="custom-css-outlined-input"
+                  id="custom-css-outlined-input"
+                />
+                <CssTextField label="Telephone" name="tel" />
+                <CssTextField
+                  id="custom-css-outlined-input"
+                  label="Message"
+                  multiline
+                  rows={4}
+                  name="message"
+                />
+                <button type="submit" className="contactLeftButton">
+                  <span>Send Mail</span>
+                  <MdEmail className="contactLeftButton-Icon" />
+                </button>
+              </form>
+            </div>
+            <div className="contactRight">
+              <p>Find me on these online spaces too!</p>
+              <div className="contactRightIcons">
+                <a
+                  href="https://www.linkedin.com/in/selim-sevgi/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsLinkedin className="contactRightIcon" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/selim-sevgi/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsGithub className="contactRightIcon" />
+                </a>
+
+                <a
+                  href="mailto:slmsvg44@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <MdEmail className="contactRightIcon" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="footer">
         <p>
           {" "}
-          <span style={{ color: "#f0535d" }}>© 2022</span> |{" "}
-          <span style={{ color: "rgb(137, 43, 226)" }}>
-            Designed & coded with
-          </span>{" "}
-          by <strong style={{ color: "rgb(0, 0, 0)" }}> Selim Sevgi,</strong>{" "}
-          All Rights Reserved.
+          <span style={{ color: "black" }}>© 2022 |</span>{" "}
+          <span> Designed & coded with by</span>{" "}
+          <strong style={{ color: "black" }}> Selim Sevgi,</strong> All Rights
+          Reserved.
         </p>
       </div>
     </div>
