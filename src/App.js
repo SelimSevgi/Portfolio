@@ -1,5 +1,5 @@
 import "./App.css";
-import { MdWavingHand, MdEmail } from "react-icons/md";
+import { MdWavingHand, MdEmail, MdSentimentNeutral } from "react-icons/md";
 import {
   SiJavascript,
   SiMaterialui,
@@ -10,9 +10,14 @@ import {
   SiVisualstudio,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
-import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
+import {
+  AiFillHtml5,
+  AiFillGithub,
+  AiOutlineCloseSquare,
+} from "react-icons/ai";
 import { FaReact, FaGitAlt } from "react-icons/fa";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { HiOutlineMenu } from "react-icons/hi";
 
 import { styled } from "@mui/material/styles";
 // form
@@ -21,9 +26,10 @@ import TextField from "@mui/material/TextField";
 // button
 
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function App() {
+  //mu companent
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
       color: "rgba(217, 255, 0, 0.89)",
@@ -46,7 +52,7 @@ function App() {
       },
     },
   });
-
+  // emailjs companent
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -68,8 +74,76 @@ function App() {
         }
       );
   };
+  const [menu, setMenu] = useState(false);
+  console.log("menuu :: " + menu);
   return (
     <div className="App">
+      <div className="mobilMenu">
+        <HiOutlineMenu className="mobileOpen" onClick={() => setMenu(true)} />
+      </div>
+      {menu && (
+        
+          <div className="mobilMenuOpen">
+            <AiOutlineCloseSquare
+              className="mobileClose"
+              onClick={() => setMenu(false)}
+            />
+
+            <div className="bannerContent">
+              <a
+                href="#about"
+                className="bannerItem"
+                onClick={() => setMenu(false)}
+              >
+                About
+              </a>
+              <div className="bannerItemLine"></div>
+            </div>
+            <div className="bannerContent">
+              <a
+                href="#skill"
+                className="bannerItem"
+                onClick={() => setMenu(false)}
+              >
+                Skill
+              </a>
+              <div className="bannerItemLine"></div>
+            </div>
+            <div className="bannerContent">
+              <a
+                href="#project"
+                className="bannerItem"
+                onClick={() => setMenu(false)}
+              >
+                Project
+              </a>
+              <div className="bannerItemLine"></div>
+            </div>
+            <div className="bannerContent">
+              <a
+                href="#contactMe"
+                className="bannerItem"
+                onClick={() => setMenu(false)}
+              >
+                Contact
+              </a>
+              <div className="bannerItemLine"></div>
+            </div>
+            <div className="bannerContent">
+              <a
+                href="https://selim-sevgi-cv.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="bannerItem"
+                onClick={() => setMenu(false)}
+              >
+                Resume
+              </a>
+              <div className="bannerItemLine"></div>
+            </div>
+          </div>
+        
+      )}
       <div className="banner">
         <div className="bannerContent">
           <a href="#about" className="bannerItem">
@@ -107,6 +181,7 @@ function App() {
           <div className="bannerItemLine"></div>
         </div>
       </div>
+
       <div className="comment" id="about">
         <div className="commentHeader">
           <span>ABOUT</span>
@@ -343,7 +418,6 @@ function App() {
                   type="email"
                   name="user_email"
                   id="custom-css-outlined-input"
-                  
                 />
                 <CssTextField label="Telephone" name="tel" />
                 <CssTextField
