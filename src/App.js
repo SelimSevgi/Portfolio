@@ -16,7 +16,7 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 import { styled } from "@mui/material/styles";
 // form
-import Box from "@mui/material/Box";
+
 import TextField from "@mui/material/TextField";
 // button
 
@@ -237,20 +237,14 @@ function App() {
           </div>
         </div>
         <div className="projectCompanent">
-          <div className="projectLeft1">
-            <img
-              src="https://i.hizliresim.com/o2eiv00.png"
-              alt="yemeksepetiResponsive"
-            />
-          </div>
-          <div className="projectRight1">
+          <div className="projectLeft">
             <h1>Yemek Sepeti</h1>
             <p>
               I cloned the Yemeksepeti website, one of the popular food websites
               in Turkey, on mobile and desktop. In this project, I developed it
               using NextJs.
             </p>
-            <div className="projectIcons1">
+            <div className="projectIcons">
               {" "}
               <SiJavascript className="projectIcon" />
               <DiCss3 className="projectIcon" />
@@ -275,6 +269,13 @@ function App() {
                 View Github Repo
               </a>
             </div>
+          </div>
+
+          <div className="projectRight">
+            <img
+              src="https://i.hizliresim.com/o2eiv00.png"
+              alt="yemeksepetiResponsive"
+            />
           </div>
         </div>
         <div className="projectCompanent">
@@ -342,7 +343,7 @@ function App() {
                   type="email"
                   name="user_email"
                   id="custom-css-outlined-input"
-                  id="custom-css-outlined-input"
+                  
                 />
                 <CssTextField label="Telephone" name="tel" />
                 <CssTextField
@@ -352,10 +353,12 @@ function App() {
                   rows={4}
                   name="message"
                 />
-                <button type="submit" className="contactLeftButton">
-                  <span>Send Mail</span>
-                  <MdEmail className="contactLeftButton-Icon" />
-                </button>
+                <div className="formBtn">
+                  <button type="submit" className="contactLeftButton">
+                    <span>Send Mail</span>
+                    <MdEmail className="contactLeftButton-Icon" />
+                  </button>
+                </div>
               </form>
             </div>
             <div className="contactRight">

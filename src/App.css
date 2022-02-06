@@ -99,11 +99,11 @@
   width: 30%;
 }
 .aboutLeft > img {
-  border-radius: 50px;
+  border-radius: 0 40px 40px 0px;
   width: 250px;
   height: 300px;
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .aboutRight {
   width: 60%;
@@ -225,7 +225,6 @@
 }
 .project {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -459,9 +458,8 @@
   transition: 0.5s;
 }
 .contactLeftButton {
-  
   border: none;
-  width: 25%;
+  width: 210px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -479,7 +477,7 @@
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 700;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 .contactLeftButton-Icon {
   position: absolute;
@@ -495,7 +493,7 @@
 }
 .contactLeftButton:hover > span {
   transition: all 700ms ease-out;
- 
+
   left: 10px;
   top: 12px;
 }
@@ -505,7 +503,6 @@
   left: 170px;
   top: 10px;
   opacity: 1;
- 
 }
 
 .footer {
@@ -518,4 +515,213 @@
   background-color: rgb(255, 255, 255);
   font-weight: 700;
   color: rgba(255, 0, 0, 0.89);
+}
+@media only screen and (max-width: 720px) {
+  .App {
+    width: 100%;
+  }
+  .banner {
+    display: none;
+  }
+  .comment {
+    background-size: 100%;
+  }
+  .commentHeader {
+    width: 80%;
+    letter-spacing: 2px;
+    margin: 10px 0;
+  }
+  .commentHeader > span:nth-child(2) {
+    font-size: 30px;
+    margin: 0;
+    color: #ff5b5bd3;
+  }
+
+  .about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+  .aboutLeft {
+    width: 100%;
+  }
+  .aboutRight {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.733);
+    display: flex;
+    flex-direction: column;
+  }
+  .projectRight {
+    width: 100%;
+  }
+  .aboutLeft > img{
+   
+    width: 200px;
+    height: 250px;
+    border-radius: 0 0px 40px 40px;
+  }
+  .aboutLeft {
+    width: 100%;
+  }
+  .aboutRight-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .aboutRight-hi > h2 {
+    margin: 10px 0;
+    font-size: 30px;
+    margin-right: 15px;
+  }
+  .aboutRight > h1 {
+    margin: 15px 0;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .aboutRight > p {
+    text-align: center;
+  }
+  .skill {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+  }
+  .skillDesc {
+    margin: 0;
+    height: auto;
+    width: 100%;
+  }
+  .skillDesc > span:nth-child(2) {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .skillDesc > span:nth-child(1) {
+    width: 80%;
+    margin: 50px 0;
+  }
+  .project {
+    background-size: contain;
+    height: auto;
+    margin: 0;
+  }
+  .projectCompanent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+  }
+  .projectLeft,
+  .projectRight1 {
+    width: 90%;
+  }
+
+  .skillGrid {
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 0;
+  }
+  .skillGrid-itemIcon {
+    height: 35px;
+    width: 35px;
+  }
+  .skillGrid-item {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .projectRight > img {
+    width: 300px;
+    margin: 50px 20px;
+  }
+  .projectDesc {
+    margin-bottom: 50;
+    text-align: start;
+  }
+
+  .projectDesc > span:nth-child(2) {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+  .projectLeft {
+    width: 100%;
+  }
+  .projectRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectIcon {
+    width: 20px;
+    height: 20px;
+  }
+  .projectFooter > a:nth-child(1),
+  .projectFooter > a:nth-child(2) {
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+  }
+  .projectFooter {
+    width: 90%;
+  }
+  .footer {
+    font-size: 18px;
+    text-align: center;
+  }
+  .contact {
+    width: 100%;
+  }
+  .contactImg {
+    width: 375px;
+    height: auto;
+  }
+
+  .contactLeft > span {
+    width: 96%;
+    padding: 0 5px;
+    font-size: 20px;
+    line-height: 120%;
+  }
+    .contactContainer {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contactContainer .MuiFormControl-root {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .formBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contactRight > p {
+  margin-bottom: 20px;
+  color:rgb(9, 10, 58);
+
+}
+
+.contactRightIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  color: #99b141ee;
+  margin-bottom: 10px;
+}
 }
